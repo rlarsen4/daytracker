@@ -4,22 +4,41 @@ landingpage / dashboard
 As a teacher I want to...
 
     -enter students (studentform) to database. [CREATE]
-        +id (?native or db)
-        +name f/l
-        +date entered
+        +create HTML form
+        +client side validation?
+        +Create students table
+            +id (?db)
+            +name f/l
+            +date entered
+        +server side code to get records into db
+            +server side validation
+            +INSERT query
     -update students after milestones [UPDATE]
-        +date tested
-        +date screened
-        +date of reportcard
-        +date exited
+        +create HTML form
+        +Update students TABLE
+            +date tested
+            +date screened
+            +date of reportcard
+            +date exited
+        +server side code to update db
+            +server side validation
+            +INSERT query
     -See alerts for students who need screens/tests/reportcards {milestones} [RETRIEVE]
-        +start 3-5 days prior to milestone date
+        +create HTML to display alerts
+        +create exclusion_date TABLE
+        +php to calculate expected milestones
+            +start 3-5 days prior to milestone date
     -print students' report cards
-        +name 
-        +date
+        +html to diplay report card
+        +php compiles report document
+            +name 
+            +date
+        +php to export to pdf?
     -exit students from database
-        +make inactive vs. delete 
+        + students TABLE
+            +make inactive vs. delete 
     -remove invalid/incorrect student records. [DELETE]
-        +outdated records (?one year; longer?)
+        +student TABLE
+            +outdated records (?one year; longer?)
     -see some other reports
         +all student activity per week / month

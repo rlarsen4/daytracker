@@ -1,10 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="header"></div>
 <div class="main"> 
 
     <!-- alerts display here -->
-    <div class="alerts">  Alerts
+    <legend>Alerts</legend>
+    <div class="alerts">  
         <?php  
-            echo "Pants, Smarty needs to be tested."
-            //echo alerts here
+            include('studentToTest.php');
         ?>
     </div>
     <div class="controls">
@@ -13,3 +22,6 @@
         <button class="reports">Reports</button>
     </div>
 </div>
+    
+</body>
+</html>

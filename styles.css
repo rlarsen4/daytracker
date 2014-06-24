@@ -1,0 +1,21 @@
+/*Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*Defaults*/
+/*Components*/
+/*Structure*/
+
+
+
+td {
+    padding: 3px;
+    border: solid #000 1px;
+}
+
+tr:nth-child(even) {
+    background-color: #eee;
+}

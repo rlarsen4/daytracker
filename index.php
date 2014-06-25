@@ -11,13 +11,13 @@
             <?php include("header.php"); ?>
         </div>    
         <div class="dashboard">
-            <div class="alerts inactive">
+            <div class="alerts inactive ">
                 <?php include("alerts.php"); ?>
             </div>
-            <div class="add_edit ">
+            <div class="add_edit inactive">
                 <?php include("add_edit.php"); ?>
             </div>
-            <div class="reports">
+            <div class="reports inactive">
                 <?php include("reports.php"); ?>
             </div>
             <div class="calendar">

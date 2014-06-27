@@ -17,6 +17,7 @@
         ?>
     </div>
     <div class="controls">
+    hi
         <button class="editCalendar">Edit no school days</button>
         <button class="addUpdateStudent">Add/Update</button>
         <button class="reports">Reports</button>

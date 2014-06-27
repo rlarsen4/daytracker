@@ -19,19 +19,28 @@
 
     <label for="begin_date">Begin Date: </label>
     <input type="text" name="begin_date"><br>
-
+    <br>
+    <hr>
     <label for="tested_date">Tested Date: </label>
-    <input type="text" name="tested_date"><br>
+    <input type="text" name="tested_date">
+    Done
+    <input type="checkbox" name="tested_complete"><br>
 
     <label for="screened_date">Screened Date: </label>
-    <input type="text" name="screened_date"><br>
-
+    <input type="text" name="screened_date">
+    Done
+    <input type="checkbox" name="tested_complete"><br>
+    
     <label for="report_card_date">Report Card Date: </label>
-    <input type="text" name="report_card_date"><br>
+    <input type="text" name="report_card_date">
+    Done
+    <input type="checkbox" name="tested_complete"><br>
 
     <label for="exit_date">Exit Date: </label>
     <input type="text" name="exit_date">
+    Done
+    <input type="checkbox" name="tested_complete">
 
-    <button>Submit</button>
+    <button>Save</button>&nbsp;&nbsp;<button>Cancel</button>
 </div>
 

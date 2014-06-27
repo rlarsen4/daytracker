@@ -2,36 +2,68 @@
 * {
     margin: 0;
     padding: 0;
-    
+}
+/* border to emulate mobile view*/
+.phone {
+    border: solid #000 5px;
+    width: 640px;
+    height: 1136px;
+    margin: 0 auto;
+}
+ 
+/************************Defaults*******************/
+th {
+    background-color: #888;
+    color: #fff;
+    text-align: left;
+}
+td {
+    text-align: right;
 }
 
-/************************Defaults*******************/
+div {
+    margin-top: 5px;
+}
 /***********************Components******************/
 /*header*/
 header {
     text-align: center;
-    background-color: #ccc;
 }
+
 /*content area*/
 .content {
-    width: 500px;
+    width: 640px;
     margin: auto;
+    background-color: #eee;
 }
 /*dashboard*/
 .dashboard {
     min-height: 300px;
 }
 /*nav*/
-.nav {
+.nav span {
     text-align: center;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.nav .button {
+.nav .tab {
+    background-color: #333;
+    color: white;
+    width: 24%;
+    border: 0;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.nav .selected {
+    background-color: #ccc;
+}
+.button {
     height: 50px;
     border: solid #000 1px;
     background-color: #333;
     color: #fff;
-    vertical-align: middle;
 }
 
 /*alerts*/
@@ -45,13 +77,17 @@ label {
     width: 100%;
 }
 input {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .search {
     float: right;
 }
 
+caption {
+    background-color: red;
+    color: #fff;
+}
 
 /*Structure*/
 
@@ -61,11 +97,21 @@ table {
 
 td {
     padding: 3px;
+}
 
+td a {
+    display: block;
 }
 
 tr:nth-child(even) {
-    background-color: #eee;
+    background-color: #ddd;
+}
+
+.datepicker {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    background-color: green;
 }
 
 .inactive {

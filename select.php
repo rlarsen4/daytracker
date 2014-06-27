@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="styles.css">
 <?php
 
 // Include Database Class
@@ -5,24 +6,25 @@ include('db.php');
 include('db_credentials.php');
 
 // Write SQL Statement
-$sql = "
- 	SELECT * FROM studentTbl WHERE exitDate IS NULL;     
+$active_students_sql = "
+ 	SELECT * FROM student WHERE exit_date IS NULL;     
 	";
 
 // Execute SQL Statement
-$results = db::execute($sql);
+$results = db::execute($active_students_sql);
 
-echo "<table>";
+echo "<table>
+        <th>FirstName</th><th>Last Name</th><th>Pretest Date</th><th>Tested Date</th>";
     while ($row = $results->fetch_assoc()) { 
         echo "<tr>" 
             . "<td>"
-            . $row['firstName'] 
+            . $row['first_name'] 
             . "</td><td>" 
-            . $row['lastName'] 
+            . $row['last_name'] 
             . "</td><td>" 
-            . $row['beginDate']
+            . $row['begin_date']
             . "</td><td>"
-            . $row['testedDate']
+            . $row['tested_date']
             . "</td>";
     }
 echo "</table>";

@@ -9,6 +9,7 @@
     width: 640px;
     height: 1136px;
     margin: 0 auto;
+    background-color: green;
 }
  
 /************************Defaults*******************/
@@ -32,7 +33,7 @@ header {
 
 /*content area*/
 .content {
-    width: 640px;
+    width: 600px;
     margin: auto;
     background-color: #eee;
 }
@@ -50,7 +51,7 @@ header {
 .nav .tab {
     background-color: #333;
     color: white;
-    width: 24%;
+    width: 25%;
     border: 0;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;

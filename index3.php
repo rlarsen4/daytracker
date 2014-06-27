@@ -35,7 +35,7 @@ include("db_credentials.php");
    
    //     query student table
         $sql = "
-            SELECT * FROM student WHERE exit_date IS NULL AND admin_id = 1
+            SELECT * FROM student, student_milestone WHERE exit_date IS NULL AND admin_id = 1
             ";
         $results = db::execute($sql);
 
@@ -45,4 +45,4 @@ include("db_credentials.php");
         // print_r($row);
         // echo "<br>";       
         // }
-  include 'home.php';
+  include 'homeview.php';

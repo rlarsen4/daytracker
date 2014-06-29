@@ -35,7 +35,10 @@ include("db_credentials.php");
    
    //     query student table
         $sql = "
-            SELECT * FROM student, student_milestone WHERE exit_date IS NULL AND admin_id = 1
+            SELECT * FROM student, student_milestone 
+            WHERE exit_date IS NULL 
+            AND admin_id = 1
+            AND student.student_id = student_milestone.student_id
             ";
         $results = db::execute($sql);
 

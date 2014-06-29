@@ -24,19 +24,26 @@
                                 <?php 
                                     date_default_timezone_set('UTC');
                                     $today = getdate();
-                                    echo $today['weekday'] . ", " . $today['month'] . " " . $today['mday'];
+                                    echo $today['weekday'] 
+                                         . ", " 
+                                         . $today['month'] 
+                                         . " " 
+                                         . $today['mday'];
                                 ?>
                             </th>
                             <?php 
                             while ($row = $results->fetch_assoc()) { 
                              ?>
-                            <tr> 
-                                <td>
-                                    <a href="*">
-                                        <?=$row['first_name']?>
+                            <tr <?php echo 'id="'
+                                    . $row['student_id']
+                                    . '">'; 
+                                    ?>
+                                <td>                                    
+                                    <?=$row['first_name'];
+                                        echo " ";
+                                        echo $row['last_name']; ?>
                                         needs to be tested. 
-                                        <input type="checkbox" name=>
-                                    </a>
+                                    <input type="checkbox" name=>
                                 </td>
                             </tr>
                             <?php 
@@ -54,10 +61,9 @@
                     </div>
                 </div>
             </main>
-            
         </div>
-        
     </div>
+<link rel="stylesheet" href="js/main.js">
 </body>
 </html>
     

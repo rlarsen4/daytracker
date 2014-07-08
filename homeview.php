@@ -14,56 +14,29 @@
                 <?php include_once 'header.php'; ?>                
             </header>
             <nav>
-                <?php include 'nav.php'; ?>
+                <?php include_once 'nav.php'; ?>
             </nav>
             <main>
                 <div class="dashboard">
-                    <div class="alerts">
-                        <table>
-                            <th>
-                                <?php 
-                                    date_default_timezone_set('UTC');
-                                    $today = getdate();
-                                    echo $today['weekday'] 
-                                         . ", " 
-                                         . $today['month'] 
-                                         . " " 
-                                         . $today['mday'];
-                                ?>
-                            </th>
-                            <?php 
-                            while ($row = $results->fetch_assoc()) { 
-                             ?>
-                            <tr <?php echo 'id="'
-                                    . $row['student_id']
-                                    . '">'; 
-                                    ?>
-                                <td>                                    
-                                    <?=$row['first_name'];
-                                        echo " ";
-                                        echo $row['last_name']; ?>
-                                        needs to be tested. 
-                                    <input type="checkbox" name=>
-                                </td>
-                            </tr>
-                            <?php 
-                            }
-                            ?>
-                            <th>
-                                <?php 
-                                    date_default_timezone_set('UTC');
-                                    $today = getdate();
-                                    echo $today['weekday'] . ", " . $today['month'] . " " . $today['mday'];
-                                ?>
-                            </th>                                
-                        </table>
-
+                    <div class="alerts ">
+                        <?php include "alerts.php" ?>
+                    </div>
+                    <div class="add_edit inactive" id="add_edit">
+                        <?php include "add_edit.php" ?>
+                    </div>
+                    <div class="reports inactive" id="reports">
+                        <?php include "reports.php" ?>
+                    </div>
+                    <div class="calendar inactive" id="calendar">
+                        <?php include "calendar.php" ?>
                     </div>
                 </div>
             </main>
         </div>
     </div>
-<link rel="stylesheet" href="js/main.js">
+<script src="/daytracker/js/jquery-1.11.1.min.js"></script>
+<script src="/daytracker/js/main.js"></script>
+<script src="../daytracker/bower_components/ReptileForms/dist/reptileforms.js"></script>
 </body>
 </html>
     

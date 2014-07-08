@@ -1,23 +1,34 @@
-<?php
+<?php   
+error_reporting(E_ALL);
+    ini_set('display_errors', 'on');
 
-// Init
-include($_SERVER['DOCUMENT_ROOT'] . '/app/core/initialize.php');
+include_once('resources/MainController.php');
 
-// Controller
-class Controller extends AppController {
-	public function __construct() {
-		parent::__construct();
+$mainController = new MainController();
 
-		// Create welcome variable in view
-		$this->view->welcome = 'Welcome to MVC';
-	}
+$path = $_SERVER['REQUEST_URI'];
 
+
+
+if($path == "/daytracker/index.php"){
+  $mainController->defaultAction();
 }
-$controller = new Controller();
+elseif($path == "/daytracker/index.php/detail"){
+  echo "Show detail";
+}
+elseif($path == "/daytracker/index.php/milestone"){
+  $mainController->milestoneCompletedAction();
+}
 
-// Extract Main Controler Vars
-extract($controller->view->vars);
+elseif($path == "/daytracker/index.php/newStudent") {
+    $mainController->newStudentAction();
+}
 
-?>
+elseif($path == "/daytracker/index.php/add_edit") {
+    $mainController->findStudentAction();
+}
+else
+{
+  $mainController->defaultAction();
+}
 
-<h1><?php echo $welcome; ?></h1>
